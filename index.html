@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
+      body {
+        background: linear-gradient(
+          to right,
+          #ee9ca7,
+          #ffdde1,
+          #12d8fa,
+          #a6ffcb
+        );
+        background-repeat: no-repeat;
+      }
 
-body{
-    background: linear-gradient(to right, #EE9CA7, #FFDDE1, #12d8fa, #a6ffcb);
-    background-repeat: no-repeat;
-}
+      .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+      #imagebox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
 
-        #imagebox {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
+      img {
+        width: 100px;
+        height: 100px;
+        /* margin: 0.5rem; */
+        padding: 0.5rem;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+        margin: 10px;
+      }
+      .heading {
+        text-align: center;
+        font-size: 3rem;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: navy;
+      }
 
-        img {
-            width: 100px;
-            height: 100px;
-            /* margin: 0.5rem; */
-            padding: 0.5rem;
-        }
-        .box {
-            width: 100px;
-            height: 100px;
-background: linear-gradient(to bottom, #FFECD2 , #FCB69F);
-            margin: 10px;
-        }
-        .heading {
-            text-align: center;
-            font-size: 4rem;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: navy
-        }
-
-        .score{
-            text-align: center;
-            margin-top: 1rem;
-            color: maroon
-        }
-
+      .score {
+        text-align: center;
+        margin-top: 0.2rem;
+        color: maroon;
+      }
+      .attempt {
+        text-align: center;
+        /* margin-top: 5px; */
+        color: blueviolet;
+      }
     </style>
-</head>
-<body>
-    <h1 class="heading"> Memory Game</h1>
+  </head>
+  <body>
+    <h1 class="heading">Memory Game</h1>
 
-<div class="wrapper">
-        <div id="imagebox">
-        
+    <div class="wrapper">
+      <div id="imagebox"></div>
     </div>
-</div>
     <h1 class="score">Your Score : <span id="score">0</span></h1>
-    
+    <h2 class="attempt">Attempt: <span class="span"> 0</span></h2>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
